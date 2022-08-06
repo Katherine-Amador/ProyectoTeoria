@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="css/estilos.css">
     <script src="./js/script.js" defer> </script>
     <link rel="icon" href="./img/bus_ico.png">
+    <title>Simulador de viajes</title>
 
 </head>
-<body class="body" style="background-image:none">
+<body class="body" style="background-image:none" id="body2">
     <div id="contenido-up" >
         <div id="cabecera2" class="contenidos" style="padding: 10px; margin: 20px; display:flex;">
             <img src="./img/bus1.png" style="align-items: left; width: 150px;">
@@ -115,7 +116,7 @@
         
     </div>
     <div class="contenidos" style="padding: 10px; margin: 20px; text-align: center;">
-        <input type="submit" class="boton" style=>
+        <input data-target ="#Resultado" type="submit" id="Enviar" class="boton" style=>
     </div>
     <div  style="padding: 10px; margin: 20px;">
         <a id="volver" href="index.html"  class="boton control" style="width: 50%;">Volver</a>
@@ -124,5 +125,77 @@
 
     </form>
     
+    <div class="modal" id="Resultado" data-content>
+        <div class="contenedor">
+            <header>Resultado</header>
+            <label data-target="#Pasajeros" >X</label>
+            <div class="contenido">
+                <div class="contenidos" style="font-size: 85%; text-align: center; height:25px; ">
+                    <h1 style="margin-top: 5px;">Beneficios/Gastos del viaje</h1>
+                </div>
+                <div class="contenidos" style="font-size: 15px;">
+                    <h2 style="text-align: center; font-size: 25px;" >Inversion para este viaje</h2> <br>
+                    <table>
+                        <tr>
+                            <td style="text-decoration: underline;">Descripcion</td>
+                            <td style="padding-left: 50px; text-decoration: underline;">Cantidad (L)</td>
+                        </tr>
+                        <tr>
+                            <td>Gastos variables</td>
+                            <td id="GV" style="padding-left: 50px;">7</td>
+                        </tr>
+                        <tr>
+                            <td>Gasto fijo</td>
+                            <td id="GF" style="padding-left: 50px;">4</td>
+                        </tr>
+                        <tr>
+                            <td>Total de gastos</td>
+                            <td id="TG" style="padding-left: 50px;">2</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="contenidos" style="font-size: 15px;">
+                    <h2 style="text-align: center; font-size: 25px; " >Ingresos de este viaje</h2> <br>
+                    <table >
+                        <tr>
+                            <td style="text-decoration: underline;">Descripcion</td>
+                            <td style="padding-left: 50px; text-decoration: underline;">Cantidad (L)</td>
+                        </tr>
+                        <tr>
+                            <td>Ingresos primera clase</td>
+                            <td id="IPC" style="padding-left: 50px;">1</td>
+                        </tr>
+                        <tr>
+                            <td>Ingresos clase normal</td>
+                            <td id="ICN" style="padding-left: 50px;">1</td>
+                        </tr>
+                        <tr>
+                            <td>Ingresos clase especial</td>
+                            <td id="ICE" style="padding-left: 50px;">2</td>
+                        </tr>
+                        <tr>
+                            <td>Total de Ingresos</td>
+                            <td id="TI" style="padding-left: 50px;">1</td>
+                        </tr>
+                    </table>
+                </div >
+                <div class="contenidos" style="font-size: 20px; padding: 5px;">
+                    <table>
+                        <tr>
+                            <td style="padding-left: 50px;">Beneficio total: </td>
+                            <td style="padding-left: 50px;">11</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="contenidos" style="font-size: 15px; padding: 5px;">
+                <a id="regresar" href="Ingresar_datos.html"  class="control boton" style="padding-left: 10px;">Volver</a>
+                <a id="salir" href="index.html"  class="control boton" style="padding-left: 10px;">Salir</a>
+            </div>
+    </div>
+
+    
+
 </body>
 </html>
