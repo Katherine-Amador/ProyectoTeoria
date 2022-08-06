@@ -1,0 +1,138 @@
+.body{
+    background-image: url(../img/Depositphotos_56621183_L.jpg);
+    background-color: rgba(202, 214, 214, 0.815);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0%;
+    position: relative;
+}
+
+#contenido-top {
+    background-color: rgba(164, 170, 207, 0.315);
+    height: 100vh;    
+}
+
+.contenidos2:hover {
+    background-color: rgba(36, 47, 107, 0.3);   
+}
+
+.contenidos {
+    background-color: rgba(77, 94, 185, 0.12);
+    padding: 50px;
+    margin: 2px 2px 2px 2px;
+    text-align: left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 35px;
+    border-radius: 25px;
+}
+
+#contenido-down {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+#section1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    -webkit-text-stroke: 0.5px rgb(5, 5, 5);
+    color: rgb(255, 255, 255);
+    margin-top: 10%;
+    margin-block-end: 10%;
+    margin-right: 10%;
+    background-color: rgba(62, 67, 100, 0.623);
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+  
+}
+
+#section1 h1 {
+    font-size:35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-stroke: 0.5px rgb(5, 5, 5);
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    background-attachment: fixed;
+    text-align: center;
+    margin: 0%;
+}
+
+#section1:hover {
+    background-color: rgba(62, 67, 100, 0.85);
+}
+
+#section2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-stroke: 0.2px rgb(255, 255, 255);
+    font-style: italic;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(26, 38, 110, 0.02);
+    text-align:center;
+    margin-top: 10%;
+    margin-block-end: 10%;
+}
+
+#section2 div {
+    display: flex;
+    margin-left: 25%;
+}
+
+.control {
+    background-color: rgba(107, 107, 163, 0.548);
+    width: 55%;
+    padding: 8px;
+    border-radius: 5px;   
+}
+
+.boton {
+    background-color: rgba(16, 16, 54, 0.562);
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.2px rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 70%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: rgba(102, 115, 153, 0.678);
+}
+
+.menu {
+    padding-top: 1%;
+    box-sizing: border-box;
+    display: flex;
+    margin-right: 6rem;
+    font-size: 20px
+    
+}
+
+.menu p {
+    cursor: pointer;
+}
+
+.menu p:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+
+[data-content] {
+    display: none;
+}
+
+.active[data-content] {
+    display: block;
+}
+
+#Parametros input {
+    width: 55px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="./js/script.js" defer> </script>
+    <link rel="icon" href="./img/bus_ico.png">
+
+</head>
+<body class="body" style="background-image:none">
+    <div id="contenido-up" >
+        <div id="cabecera2" class="contenidos" style="padding: 10px; margin: 20px; display:flex;">
+            <img src="./img/bus1.png" style="align-items: left; width: 150px;">
+            <h1 style="text-align: center; padding-left: 5%;">Definir los datos de este viaje</h1>
+    </div>
+    <form>
+    <div id="contenido" class="contenidos menu" style="margin: 10px; display: flex;">
+        <p data-target="#Pasajeros">Pasajeros</p>
+        <p>|</p>
+        <p data-target="#Rutas">Ruta</p>
+
+        <div class="content">
+            <div></div>
+            <div data-content id="Pasajeros"  style="padding: 10px; margin: 20px; align-items: flex-start;"  >
+
+                <table class="default">
+                    <tr>
+                        <td> Demanda primera clase</td>
+                        <td><input  type="number" id="DPC" min="0" required ></td>
+                    </tr>
+                    <tr>
+                        <td>Demanda clase normal</td>
+                        <td><input  type="number" id="DCN" min="0" required ></td>
+                    </tr>
+                    <tr>
+                        <td>Demanda clase especial</td>
+                        <td><input  type="number" id="DCE" min="0" required></td>
+                    </tr>
+                </table>
+                
+            </div>
+            <div data-content id="Rutas" class="section2" style="padding: 10px; margin: 20px;">
+                <table class="default">
+                    <tr>
+                        <td>Nombre de la ruta</td>
+                        <td><input  type="search" id="nombre-ruta" required></td>
+                    </tr>
+                    <tr>
+                        <td>Distancia aproximada (km)</td>
+                        <td><input  type="number" id="distancia-ruta" min="1" required></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <h3 style="margin-left: 7% ;">
+        <label>Configuracion del viaje</label>
+    </h3>
+    <div id="contenido2" class="contenidos" style="margin: 20px; font-size: 15px; text-align: left;">
+        <label> <input data-target="#Parametros-definidos" type="radio" name="parametros" checked> Parametros predeterminados </label> <br>
+        <label> <input data-target="#Parametros" type="radio" name="parametros"> Configurar parametros </label>
+        <div class="content">
+            <div data-content id="Parametros-definidos">
+                
+            </div>
+            <div data-content id="Parametros">
+                <h2 style="text-align: center;">Configurar parametros</h2> <br>
+                <table class="default">
+                    <tr>
+                        <td> Precio del combustible (L/G)  </td>
+                        <td> <input type="number" min="0" id="PC" required value="136" > </td>
+                    </tr>
+                    <tr>
+                        <td> Rendimiento del combustible (G/KM)  </td>
+                        <td> <input type="number" min="0" id="RC" value="7" required> </td>
+                    </tr>
+                    <tr>
+                        <td>Capacidad del autobus</td>
+                        <td><input  type="number" min="0" id="CB" value="40" required ></td>
+                    </tr>
+                    <tr>
+                        <td>Tarifa primera clase </td>
+                        <td><input  type="number" min="0" id="TPC" value="1000" required  ></td>
+                    </tr>
+                    <tr>
+                        <td>Tarifa clase normal</td>
+                        <td><input  type="number" min="0" id="TCN" value="700" required></td>
+                    </tr>
+                    <tr>
+                        <td>Tarifa clase especial</td>
+                        <td><input  type="number" min="0" id="TCE" value="500" required></td>
+                    </tr>
+                    <tr>
+                        <td>Limite primera clase</td>
+                        <td><input  type="number" min="0" id="LPPC" value="10" required ></td>
+                    </tr>
+                    <tr>
+                        <td>Incluye refrigerio </td>
+                        <td>Si  <input name="Refrigerio" type="radio" id="si" checked > No  <input name="Refrigerio" type="radio" id="No" > </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+        
+    </div>
+    <div class="contenidos" style="padding: 10px; margin: 20px; text-align: center;">
+        <input type="submit" class="boton" style=>
+    </div>
+    <div  style="padding: 10px; margin: 20px;">
+        <a id="volver" href="index.html"  class="boton control" style="width: 50%;">Volver</a>
+    </div>
+    
+
+    </form>
+    
+</body>
+</html>
