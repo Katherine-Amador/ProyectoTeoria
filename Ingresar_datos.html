@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,130 +12,101 @@
     <title>Simulador de viajes</title>
 
 </head>
+
 <body class="body" style="background-image:none" id="body2">
-    <div id="contenido-up" >
+    <div id="contenido-up">
         <div id="cabecera2" class="contenidos" style="padding: 10px; margin: 20px; display:flex;">
             <img src="./img/bus1.png" style="align-items: left; width: 150px;">
             <h1 style="text-align: center; padding-left: 5%;">Definir los datos de este viaje</h1>
-    </div>
-    <form>
-    <div id="contenido" class="contenidos menu" style="margin: 10px; display: flex;">
-        <p data-target="#Pasajeros">Pasajeros</p>
-        <p>|</p>
-        <p data-target="#Rutas">Ruta</p>
+        </div>
 
-        <div class="content">
-            <div></div>
-            <div data-content id="Pasajeros"  style="padding: 10px; margin: 20px; align-items: flex-start;"  >
 
-                <table class="default">
-                    <tr>
-                        <td> Demanda primera clase</td>
-                        <td><input  type="number" id="DPC" min="0" required ></td>
-                    </tr>
-                    <tr>
-                        <td>Demanda clase normal</td>
-                        <td><input  type="number" id="DCN" min="0" required ></td>
-                    </tr>
-                    <tr>
-                        <td>Demanda clase especial</td>
-                        <td><input  type="number" id="DCE" min="0" required></td>
-                    </tr>
-                </table>
-                
+
+        <div id="contenido2" class="contenidos" style="margin: 20px; font-size: 15px; text-align: left;">
+            <div class="content">
+                <div data-content id="Parametros-definidos">
+
+                </div>
+                <div class="cont_form center">
+                    <form>
+                        <div class="items-form" style="padding: 10px; margin: 20px; text-align: left;"></div>
+
+                        <label class="col-5" for="ruta">Seleccionar Ruta</label>
+                        <select class="col-5 " name="ruta" id="ruta">
+                            <option value="" selected></option>
+                            <option value="">Tegucigalpa – Comayagua</option>
+                            <option value="">Tegucigalpa – San Pedro Sula</option>
+                            <option value="">Tegucigalpa – Siguatepeque</option>
+                            <option value="">Tegucigalpa – Santa Bárbara la Campa</option>
+                            <option value="">Tegucigalpa – Santa Rosa de Copán</option>
+                            <option value="">Tegucigalpa – Olancho</option>
+                            <option value="">Tegucigalpa – Choluteca</option>
+                            <option value="">Tegucigalpa – La Ceiba</option>
+                            <option value="">Tegucigalpa – Trujillo</option>
+                            <option value="">Tegucigalpa – Danlí</option>
+                        </select>
+
+                </div><br>
+                <div class="items-form">
+                    <label class="col-5" for="bus">Cantidad de Pasajeros</label>
+                    <select class="col-5 " name="bus" id="bus">
+                        <option value="" selected></option>
+                        <option value="46">Bus para 46 pasajeros</option>
+                        <option value="56">Bus para 56 pasajeros</option>
+                    </select>
+                    <div class="items-form"><br>
+                        <label for="primeraclase" class="col-5">Primera clase</label>
+                        <input id="primeraclase" type="number" class="col-5" min="0" max="10" value=" ">
+                    </div><br>
+                    <div class="items-form">
+                        <label for="normal" class="col-5">Normal</label>
+                        <input id="normal" type="number" class="col-5" min="0" value=" ">
+                    </div><br>
+                    <div class="items-form">
+                        <label for="niños" class="col-5">Niños</label>
+                        <input id="niños" type="number" class="col-5" min="0" value=" ">
+                    </div><br>
+                    <div class="items-form">
+                        <label for="terceraedad" class="col-5">Tercera Edad</label>
+                        <input id="terceraedad" type="number" class="col-5" min="0" value=" ">
+                    </div><br>
+                    <div class="button-form row">
+
+                    </div>
+                    </form>
+                </div>
             </div>
-            <div data-content id="Rutas" class="section2" style="padding: 10px; margin: 20px;">
-                <table class="default">
-                    <tr>
-                        <td>Nombre de la ruta</td>
-                        <td><input  type="search" id="nombre-ruta" required></td>
-                    </tr>
-                    <tr>
-                        <td>Distancia aproximada (km)</td>
-                        <td><input  type="number" id="distancia-ruta" min="1" required></td>
-                    </tr>
-                </table>
-            </div>
+
+
+
+
+
+            </table>
+
         </div>
     </div>
 
-
-    <h3 style="margin-left: 7% ;">
-        <label>Configuracion del viaje</label>
-    </h3>
-    <div id="contenido2" class="contenidos" style="margin: 20px; font-size: 15px; text-align: left;">
-        <label> <input data-target="#Parametros-definidos" type="radio" name="parametros" checked> Parametros predeterminados </label> <br>
-        <label> <input data-target="#Parametros" type="radio" name="parametros"> Configurar parametros </label>
-        <div class="content">
-            <div data-content id="Parametros-definidos">
-                
-            </div>
-            <div data-content id="Parametros">
-                <h2 style="text-align: center;">Configurar parametros</h2> <br>
-                <table class="default">
-                    <tr>
-                        <td> Precio del combustible (L/G)  </td>
-                        <td> <input type="number" min="0" id="PC" required value="136" > </td>
-                    </tr>
-                    <tr>
-                        <td> Rendimiento del combustible (G/KM)  </td>
-                        <td> <input type="number" min="0" id="RC" value="7" required> </td>
-                    </tr>
-                    <tr>
-                        <td>Capacidad del autobus</td>
-                        <td><input  type="number" min="0" id="CB" value="40" required ></td>
-                    </tr>
-                    <tr>
-                        <td>Tarifa primera clase </td>
-                        <td><input  type="number" min="0" id="TPC" value="1000" required  ></td>
-                    </tr>
-                    <tr>
-                        <td>Tarifa clase normal</td>
-                        <td><input  type="number" min="0" id="TCN" value="700" required></td>
-                    </tr>
-                    <tr>
-                        <td>Tarifa clase especial</td>
-                        <td><input  type="number" min="0" id="TCE" value="500" required></td>
-                    </tr>
-                    <tr>
-                        <td>Limite primera clase</td>
-                        <td><input  type="number" min="0" id="LPPC" value="10" required ></td>
-                    </tr>
-                    <tr>
-                        <td>Incluye refrigerio </td>
-                        <td>Si  <input name="Refrigerio" type="radio" id="si" checked > No  <input name="Refrigerio" type="radio" id="No" > </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                </table>
-
-            </div>
-        </div>
-        
     </div>
     <div class="contenidos" style="padding: 10px; margin: 20px; text-align: center;">
-        <input data-target ="#Resultado" type="button" id="Enviar" class="boton" value="Enviar">
+        <input data-target="#Resultado" type="button" id="Enviar" class="boton" value="Calcular">
     </div>
-    <div  style="padding: 10px; margin: 20px;">
-        <a id="volver" href="index.html"  class="boton control" style="width: 50%;">Volver</a>
+    <div style="padding: 10px; margin: 20px;">
+        <a id="volver" href="index.html" class="boton control" style="width: 50%;">Volver</a>
     </div>
-    
+
 
     </form>
-    
+
     <div class="modal" id="Resultado" data-content>
         <div class="contenedor">
             <header>Resultado</header>
-            <label data-target="#Pasajeros" >X</label>
+            <label data-target="#Pasajeros">X</label>
             <div class="contenido">
                 <div class="contenidos" style="font-size: 85%; text-align: center; height:25px; ">
                     <h1 style="margin-top: 5px;">Beneficios/Gastos del viaje</h1>
                 </div>
                 <div class="contenidos" style="font-size: 15px;">
-                    <h2 style="text-align: center; font-size: 25px;" >Inversion para este viaje</h2> <br>
+                    <h2 style="text-align: center; font-size: 25px;">Inversion para este viaje</h2> <br>
                     <table>
                         <tr>
                             <td style="text-decoration: underline;">Descripcion</td>
@@ -156,8 +128,8 @@
                 </div>
 
                 <div class="contenidos" style="font-size: 15px;">
-                    <h2 style="text-align: center; font-size: 25px; " >Ingresos de este viaje</h2> <br>
-                    <table >
+                    <h2 style="text-align: center; font-size: 25px; ">Ingresos de este viaje</h2> <br>
+                    <table>
                         <tr>
                             <td style="text-decoration: underline;">Descripcion</td>
                             <td style="padding-left: 50px; text-decoration: underline;">Cantidad (L)</td>
@@ -179,7 +151,7 @@
                             <td id="TI" style="padding-left: 50px;">1</td>
                         </tr>
                     </table>
-                </div >
+                </div>
                 <div class="contenidos" style="font-size: 20px; padding: 5px;">
                     <table>
                         <tr>
@@ -190,12 +162,13 @@
                 </div>
             </div>
             <div class="contenidos" style="font-size: 15px; padding: 5px;">
-                <a id="regresar" href="Ingresar_datos.html"  class="control boton" style="padding-left: 10px;">Volver</a>
-                <a id="salir" href="index.html"  class="control boton" style="padding-left: 10px;">Salir</a>
+                <a id="regresar" href="Ingresar_datos.html" class="control boton" style="padding-left: 10px;">Volver</a>
+                <a id="salir" href="index.html" class="control boton" style="padding-left: 10px;">Salir</a>
             </div>
-    </div>
+        </div>
 
-    
+
 
 </body>
+
 </html>

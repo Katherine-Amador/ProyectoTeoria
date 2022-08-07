@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+
+    <!-- Css propios -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <title>Beneficio esperado</title>
+</head>
+<body>
+    <Div class="contenedor ">
+        <div>
+            <div class="titulo_en center"><h1>Empresa de Transporte</h1></div>
+            <div>
+                <a href="../index.html">
+                    <button class="btn btn_en btn-primary">Menú</button>
+                </a>
+                <button type="button" class="btn btn_en btn-primary" data-bs-toggle="modal" data-bs-target="#informacion">
+                    Ayuda
+                </button>
+            </div>
+            <hr>
+        </div>
+        <div class="cont_form center">
+            <form action="">
+                <div class="items-form">
+                    <label class="col-5" for="ruta">Ruta seleccionada</label>
+                    <input type="text" id="ruta" disabled>
+                    <!--<select class="col-5 " name="ruta" id="ruta"></select>-->
+                </div>
+                <div class="items-form">
+                    <label for="">Ingreso</label>
+                    <hr>
+                </div>
+                <div class="items-form">
+                    <label for="ingresos" class="col-5">Ingresos</label>
+                    <input id="ingresos" type="text" class="col-5" disabled>
+                </div>
+                <div class="items-form">
+                    <label for="">Gastos invertidos</label>
+                    <hr>
+                </div>
+                <div class="items-form">
+                    <label for="gasto_variable" class="col-5">Gasto variable</label>
+                    <input id="gasto_variable" type="text" class="col-5" disabled>
+                </div>
+                <div class="items-form">
+                    <label for="gasto_fijo" class="col-5">Gasto Fijo</label>
+                    <input id="gasto_fijo" type="text" class="col-5" disabled>
+                </div>
+                <div class="items-form">
+                    <label for="">Beneficio esperado</label>
+                    <hr>
+                </div>
+                <div class="items-form">
+                    <label for="beneficio" class="col-5">Beneficio Esperado</label>
+                    <input id="beneficio" type="text" class="col-5" disabled>
+                </div>
+                <div class="button-form_be row">
+                    <div class="col-6">
+                        <a href="./et_seleccion_rutas.html">
+                            <input class="btn btn_en btn-primary" type="button" value="Nuevo">
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="./et_beneficio_total.html">
+                            <input class="btn btn_en btn-primary" type="button" value="Ver BT">
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </Div>
+    <!-- Modal -->
+    <div class="modal fade" id="informacion" tabindex="-1" aria-labelledby="informacion" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="informacion">Información</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <h6>Indicaciones</h6>
+                    <p>
+                        En la pantalla se muestra los resultados de los cálculos correspondientes a los datos proporcionados en la página anterior.
+                    </p>
+                    <p>
+                        El botón "Nuevo" permite regresar a la página anterior para poder calcular una nueva ruta.
+                    </p>
+                    <p>
+                        El botón "Ver BT" nos lleva a la página de beneficio total esperado mostrando un gráfico comparativo entre las rutas cálculadas.
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h6>Rutas disponibles</h6>
+                    <ol>
+                        <li>
+                            Tegucigalpa – Comayagua
+                            <ul>
+                                <li>Distancia: 91.1 Km</li>
+                                <li>Gasto Combustible: L. 2,448.38</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 285.00</li>
+                                        <li>Normal: L. 200.00</li>
+                                        <li>Niños y 3ra edad: L. 145.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 1</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – San Pedro Sula
+                            <ul>
+                                <li>Distancia: 251.0 Km</li>
+                                <li>Gasto Combustible: L. 6,748.47</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 785.00</li>
+                                        <li>Normal: L. 550.00</li>
+                                        <li>Niños y 3ra edad: L. 395.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 3</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – Siguatepeque
+                            <ul>
+                                <li>Distancia: 125.0 Km</li>
+                                <li>Gasto Combustible: L. 3,359.46</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 390.00</li>
+                                        <li>Normal: L. 225.00</li>
+                                        <li>Niños y 3ra edad: L. 200.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 2</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – Santa Bárbara la Campa
+                            <ul>
+                                <li>Distancia: 207.9 Km</li>
+                                <li>Gasto Combustible: L. 5,587.44</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 650.00</li>
+                                        <li>Normal: L. 455.00</li>
+                                        <li>Niños y 3ra edad: L. 325.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 2</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – Santa Rosa de Copán
+                            <ul>
+                                <li>Distancia: 320.8 Km</li>
+                                <li>Gasto Combustible: L. 8,621.71</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 1,000.00</li>
+                                        <li>Normal: L. 700.00</li>
+                                        <li>Niños y 3ra edad: L. 500.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 2</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – Olancho
+                            <ul>
+                                <li>Distancia: 235.9 Km</li>
+                                <li>Gasto Combustible: L. 6,339.96</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 740.00</li>
+                                        <li>Normal: L. 520.00</li>
+                                        <li>Niños y 3ra edad: L. 370.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 0</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – Choluteca
+                            <ul>
+                                <li>Distancia: 147.1 Km</li>
+                                <li>Gasto Combustible: L. 3953.4</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 460.00</li>
+                                        <li>Normal: L. 325.00</li>
+                                        <li>Niños y 3ra edad: L. 230.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 0</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – La Ceiba
+                            <ul>
+                                <li>Distancia: 401.7 Km</li>
+                                <li>Gasto Combustible: L. 10,795.94</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 1255.00</li>
+                                        <li>Normal: L. 880.00</li>
+                                        <li>Niños y 3ra edad: L. 630.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 3</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – Trujillo
+                            <ul>
+                                <li>Distancia: 411.1 Km</li>
+                                <li>Gasto Combustible: L. 11048.58</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 1285.00</li>
+                                        <li>Normal: L. 900.00</li>
+                                        <li>Niños y 3ra edad: L. 645.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 3</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Tegucigalpa – Danlí
+                            <ul>
+                                <li>Distancia: 94.3 Km</li>
+                                <li>Gasto Combustible: L. 2,504.37</li>
+                                <li>Valor de pasaje:
+                                    <ul>
+                                        <li>Primera Clase: L. 295.00</li>
+                                        <li>Normal: L. 210.00</li>
+                                        <li>Niños y 3ra edad: L. 150.00</li>
+                                    </ul>
+                                </li>
+                                <li>Peaje:
+                                    <ul>
+                                        <li>Cantidad: 0</li>
+                                        <li>Precio: L. 87.00</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <hr>
+                <div>
+                    <h6>Valor del asiento por Km:</h6>
+                    <ol>
+                        <li>Primera Clase: L. 3.12</li>
+                        <li>Normal: L. 2.19</li>
+                        <li>Niños y Tercera Edad: L. 1.56</li>
+                    </ol>
+                </div>
+                <div>
+                    <h6>Aspectos importantes del combustible</h6>
+                    <ol>
+                        <li>Tipo: Diesel</li>
+                        <li>Precio por galón: L. 77.60 </li>
+                        <li>Rendimiento de combustible: 2.887 Km / galon</li>
+                    </ol>
+                </div>
+                <div>
+                    <h6>Consideraciones para gasto fijo</h6>
+                    <p>Alimentación:<p>
+                    <ol>
+                        <li>L. 50 si # de Km <= 320.8 km</li>
+                        <li>L. 120 si # de km > 320.8 Km (En cuenta 2 comidas por la distancia)</li>
+                        <li>Sumado el chofer y el ayudante</li>
+                    </ol>
+                </div>
+                <br><hr><br>
+                <div>
+                    <small>Las distancias se obtuvierón en Google Maps, el precio del combustible según el actual en el país.</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn_en btn-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+   
+</body>
+</html>
