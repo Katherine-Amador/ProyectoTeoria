@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="./js/script.js" defer> </script>
+    <link rel="icon" href="./img/bus_ico.png">
+
+</head>
+
+<body>
+    <div class="form">
+        <div style="padding: 10px; margin: 20px; text-align: center;">
+            </div>
+
+<body>
+    <div>
+            <div class="titulo_en center">
+                <h1>Simulador Financiero</h1>
+            </div>
+            <div>
+                <a href="inicio.html">
+                    <button class="btn btn_en btn-primary">Menú</button>
+                </a>
+
+                <button type="button" class="btn btn_en btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#informacion">Ayuda</button>
+            </div>
+            <hr>
+        </div>
+        <div>
+            <div class="center">
+                <h5>Mensualidad de un Préstamo</h5>
+                <p>Mediante el presente simulador podrá saber cuánto deberá pagar cada mes en un determinado préstamo.
+                </p>
+            </div>
+            <div class="cont_form_prest left">
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <div class="col-7">
+                            <div class="cont_form_futuro center">
+
+                                <form action="" id="miForm">
+                                    <div class="items-form ">
+                                        <label class="Col-3" for="monto">Capital Inicial</label>
+                                        <input class="Col-3" type="text" id="monto">
+                                        <select class="Col-3" name="" id="moneda">
+                                            <option value="frances"> </option>
+                                            <option value="lempira"> L. </option>
+                                            <option value="dolar"> &dollar; </option>
+                                            <!--<option value="euro"> &euro; </option>-->
+                                        </select>
+                                    </div><br>
+                                    <div class="items-form">
+                                        <label class="Col-5" for="interes">Tipo de INA</label>
+                                        <input class="Col-5" type="text" id="interes">
+                                        <select class="Col-2" name="" id="" >
+                                            <option value="%" selected>%</option>
+                                        </select>
+                                        <!--<label class="Col-3" for="">%</label>-->
+                                    </div><br>
+                                    <div class="items-form">
+                                        <label class="" for="tiempo">Plazo</label>
+                                        <input class="" type="text" id="tiempo">
+                                        <select class="" name="" id="tipoTiempo">
+                                            <option value="frances"> </option>
+                                            <option value="anios">Años</option>
+                                            <option value="meses">Meses</option>
+                                        </select>
+                                    </div><br>
+                                    <div class="items-form">
+                                        <label class="Col-5" for="amortizacion">Tipo de amortizacion</label>
+                                        <!-- <input class="Col-5" type="text" id="amorticacionText" disabled> -->
+                                        <select class="3" name="" id="amortizacion">
+                                            <option value="frances"> </option>
+                                            <option value="frances">Sistema francés</option>
+                                            <option value="aleman">Sistema alemán</option>
+                                        </select>
+                                    </div><br>
+                                    <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error">
+                                        Debes llenar todos los campos!
+                                    </div>
+                                    <div class="items-form">
+                                        <button class="btn btn_en btn-primary" type="button"
+                                            id="btnCalcular">Calcular</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tabla_amortizacion center" id="tabla_amortizacion">
+                        <div class="items-form">
+                            <!-- <label for="">Tabla de Amortización</label> -->
+                            <div class="center">
+                                <h5>Tabla de Amortización</h5>
+                            </div>
+                            <hr>
+                        </div>
+                        <br>
+                        <div class="">
+                            <!-- Tabla de amortizacion -->
+                            <table id="lista-tabla" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Cuota</th>
+                                        <th>Capital</th>
+                                        <th>Interés</th>
+                                        <th>Saldo</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+           
+            <br>
+        </div>
+    </div>
+
+</body>
+
+</html>
