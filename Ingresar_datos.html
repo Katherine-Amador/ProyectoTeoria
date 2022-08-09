@@ -19,9 +19,6 @@
             <img src="./img/bus1.png" style="align-items: left; width: 150px;">
             <h1 style="text-align: center; padding-left: 5%;">Definir los datos de este viaje</h1>
         </div>
-
-
-
         <div id="contenido2" class="contenidos" style="margin: 20px; font-size: 15px; text-align: left;">
             <div class="content">
                 <div data-content id="Parametros-definidos">
@@ -30,22 +27,20 @@
                 <div class="cont_form center">
                     <form>
                         <div class="items-form" style="padding: 10px; margin: 20px; text-align: left;"></div>
-
                         <label class="col-5" for="ruta">Seleccionar Ruta</label>
                         <select class="col-5 " name="ruta" id="ruta">
-                            <option value="" selected></option>
-                            <option value="">Tegucigalpa – Comayagua</option>
-                            <option value="">Tegucigalpa – San Pedro Sula</option>
-                            <option value="">Tegucigalpa – Siguatepeque</option>
-                            <option value="">Tegucigalpa – Santa Bárbara la Campa</option>
-                            <option value="">Tegucigalpa – Santa Rosa de Copán</option>
-                            <option value="">Tegucigalpa – Olancho</option>
-                            <option value="">Tegucigalpa – Choluteca</option>
-                            <option value="">Tegucigalpa – La Ceiba</option>
-                            <option value="">Tegucigalpa – Trujillo</option>
-                            <option value="">Tegucigalpa – Danlí</option>
+                            <option value="-1" selected></option>
+                            <option value="0">Tegucigalpa – Comayagua</option>
+                            <option value="1">Tegucigalpa – San Pedro Sula</option>
+                            <option value="2">Tegucigalpa – Siguatepeque</option>
+                            <option value="3">Tegucigalpa – Santa Bárbara la Campa</option>
+                            <option value="4">Tegucigalpa – Santa Rosa de Copán</option>
+                            <option value="5">Tegucigalpa – Olancho</option>
+                            <option value="6">Tegucigalpa – Choluteca</option>
+                            <option value="7">Tegucigalpa – La Ceiba</option>
+                            <option value="8">Tegucigalpa – Trujillo</option>
+                            <option value="9">Tegucigalpa – Danlí</option>
                         </select>
-
                 </div><br>
                 <div class="items-form">
                     <label class="col-5" for="bus">Cantidad de Pasajeros</label>
@@ -71,30 +66,20 @@
                         <input id="terceraedad" type="number" class="col-5" min="0" value=" ">
                     </div><br>
                     <div class="button-form row">
-
                     </div>
                     </form>
                 </div>
             </div>
-
-
-
-
-
             </table>
-
         </div>
     </div>
-
     </div>
     <div class="contenidos" style="padding: 10px; margin: 20px; text-align: center;">
-        <input data-target="#Resultado" type="button" id="Enviar" class="boton" value="Calcular">
+        <input data-target="#Resultado" type="button" id="Enviar" class="boton" value="Calcular" onclick="calcularGastos()">
     </div>
     <div style="padding: 10px; margin: 20px;">
         <a id="volver" href="index.html" class="boton control" style="width: 50%;">Volver</a>
     </div>
-
-
     </form>
 
     <div class="modal" id="Resultado" data-content>
@@ -114,15 +99,15 @@
                         </tr>
                         <tr>
                             <td>Gastos variables</td>
-                            <td id="GV" style="padding-left: 50px;">7</td>
+                            <td id="GV" style="padding-left: 50px;">N/D</td>
                         </tr>
                         <tr>
                             <td>Gasto fijo</td>
-                            <td id="GF" style="padding-left: 50px;">4</td>
+                            <td id="GF" style="padding-left: 50px;">300</td>
                         </tr>
                         <tr>
                             <td>Total de gastos</td>
-                            <td id="TG" style="padding-left: 50px;">2</td>
+                            <td id="TG" style="padding-left: 50px;">N/D</td>
                         </tr>
                     </table>
                 </div>
@@ -131,24 +116,28 @@
                     <h2 style="text-align: center; font-size: 25px; ">Ingresos de este viaje</h2> <br>
                     <table>
                         <tr>
+                            <td style="text-decoration: underline;">Precio viaje: </td>
+                            <td style="padding-left: 50px; text-decoration: underline;" id="precio">N/D</td>
+                        </tr>
+                        <tr>
                             <td style="text-decoration: underline;">Descripcion</td>
                             <td style="padding-left: 50px; text-decoration: underline;">Cantidad (L)</td>
                         </tr>
                         <tr>
                             <td>Ingresos primera clase</td>
-                            <td id="IPC" style="padding-left: 50px;">1</td>
+                            <td id="IPC" style="padding-left: 50px;">N/D</td>
                         </tr>
                         <tr>
                             <td>Ingresos clase normal</td>
-                            <td id="ICN" style="padding-left: 50px;">1</td>
+                            <td id="ICN" style="padding-left: 50px;">N/D</td>
                         </tr>
                         <tr>
                             <td>Ingresos clase especial</td>
-                            <td id="ICE" style="padding-left: 50px;">2</td>
+                            <td id="ICE" style="padding-left: 50px;">N/D</td>
                         </tr>
                         <tr>
                             <td>Total de Ingresos</td>
-                            <td id="TI" style="padding-left: 50px;">1</td>
+                            <td id="TI" style="padding-left: 50px;">N/D</td>
                         </tr>
                     </table>
                 </div>
@@ -156,7 +145,7 @@
                     <table>
                         <tr>
                             <td style="padding-left: 50px;">Beneficio total: </td>
-                            <td style="padding-left: 50px;">11</td>
+                            <td style="padding-left: 50px;" id="BT">N/D</td>
                         </tr>
                     </table>
                 </div>
@@ -166,8 +155,6 @@
                 <a id="salir" href="index.html" class="control boton" style="padding-left: 10px;">Salir</a>
             </div>
         </div>
-
-
 
 </body>
 
