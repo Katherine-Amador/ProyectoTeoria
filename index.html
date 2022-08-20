@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,46 +8,62 @@
     <title>Simulador de viajes</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" href="./img/bus_ico.png">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
+
 <body class="body">
-    
-       <div id="contenido" class="contenidos" style="text-align: center;">
-            <h1>Simulador de beneficios de viaje</h1> 
-       </div>
-    <div id="contenido-down">
-        <section id="section1">
-            <h1>
-                <p><h1>Bienvenido al simulador de viajes</h1>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Simulador Financiero</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ingresar_datos.html">Simulador de rutas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="prestamo.html">Simulador de prestamos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#informacion">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="row justify-content-center">
+            <section id="section1"  style="margin-left:100px">
+                <h1>
+                    <p>
+                    <h1>Bienvenido al simulador financiero</h1>
                     <h2>
                         <p>
-                            Tu defines los datos acorde a tu <br>
-                            proximo viaje<br><br>
-                            El sistema recibe y calcula <br>
-                            El resultado mas preciso  <br>
-                            para obtener tus beneficios <br>
-                            aproximados
+                            En este simulador tu podras calcular
+                            tanto precios de ganancias por rutas de transportes
+                            como cuotas niveladas de prestamo.
                         </p>
                     </h2>
-                </p>
-            </h1>
-
-        </section>
-        <section id="section2">
-            <h2>
-
-            </h2>
-            <h1>Ingresar informacion</h1>
-            <div>
-                <img  src="img/data_send.png" style="max-width: 35px; padding-right: 15px;">
-                <a id="acceder" href="Ingresar_datos.html"  class="control boton">Simulador de rutas</a>
-                <img  src="img/data_send.png" style="max-width: 35px; padding-right: 15px;">
-                <a id="acceder" href="servicio_financiero.html"  class="control boton">Simulador de finanzas</a>
-            </div>
-        </section>
-    </div>
-       
-    </div>
+                    </p>
+                </h1>
     
+            </section>
+        </div>
+    </main>
+
+    </div>
+
 </body>
+
 </html>

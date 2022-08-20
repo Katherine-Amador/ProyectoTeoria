@@ -7,29 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="./js/script.js" defer> </script>
     <link rel="icon" href="./img/bus_ico.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js" defer> </script>
     <title>Simulador de viajes</title>
-
 </head>
 
-<body class="body" style="background-image:none" id="body2">
+<body class="container-fluid" style="background-image:none" id="body2">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Simulador Financiero</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ingresar_datos.html">Simulador de rutas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="prestamo.html">Simulador de prestamos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#informacion">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div id="contenido-up">
         <div id="cabecera2" class="contenidos" style="padding: 10px; margin: 20px; display:flex;">
             <img src="./img/bus1.png" style="align-items: left; width: 150px;">
-            <h1 style="text-align: center; padding-left: 5%;">Definir los datos de este viaje</h1>
+            <h1 style="text-align: center; padding-left: 5%; padding-top:40px">Definir los datos de este viaje</h1>
         </div>
         <div id="contenido2" class="contenidos" style="margin: 20px; font-size: 15px; text-align: left;">
             <div class="content">
-                <div data-content id="Parametros-definidos">
-
-                </div>
-                <div class="cont_form center">
-                    <form>
-                        <div class="items-form" style="padding: 10px; margin: 20px; text-align: left;"></div>
-                        <label class="col-5" for="ruta">Seleccionar Ruta</label>
-                        <select class="col-5 " name="ruta" id="ruta">
-                            <option value="-1" selected></option>
+                <div class="row justify-content-center">
+                    <div class="col-5">
+                        <select class="form-select" name="ruta" id="ruta">
+                            <option value="-1" selected disabled>Seleccionar ruta</option>
                             <option value="0">Tegucigalpa – Comayagua</option>
                             <option value="1">Tegucigalpa – San Pedro Sula</option>
                             <option value="2">Tegucigalpa – Siguatepeque</option>
@@ -41,46 +66,57 @@
                             <option value="8">Tegucigalpa – Trujillo</option>
                             <option value="9">Tegucigalpa – Danlí</option>
                         </select>
-                </div><br>
-                <div class="items-form">
-                    <label class="col-5" for="bus">Cantidad de Pasajeros</label>
-                    <select class="col-5 " name="bus" id="bus">
-                        <option value="" selected></option>
-                        <option value="46">Bus para 46 pasajeros</option>
-                        <option value="56">Bus para 56 pasajeros</option>
-                    </select>
-                    <div class="items-form"><br>
-                        <label for="primeraclase" class="col-5">Primera clase</label>
-                        <input id="primeraclase" type="number" class="col-5" min="0" max="10" value=" ">
-                    </div><br>
-                    <div class="items-form">
-                        <label for="normal" class="col-5">Normal</label>
-                        <input id="normal" type="number" class="col-5" min="0" value=" ">
-                    </div><br>
-                    <div class="items-form">
-                        <label for="niños" class="col-5">Niños</label>
-                        <input id="niños" type="number" class="col-5" min="0" value=" ">
-                    </div><br>
-                    <div class="items-form">
-                        <label for="terceraedad" class="col-5">Tercera Edad</label>
-                        <input id="terceraedad" type="number" class="col-5" min="0" value=" ">
-                    </div><br>
-                    <div class="button-form row">
                     </div>
-                    </form>
+                </div>
+                < <div class="row justify-content-center mb-3">
+                    <div class="col-5">
+                        <select class="form-select" name="bus" id="bus">
+                            <option value="" selected disabled>Cantidad de pasajeros</option>
+                            <option value="46">Bus para 46 pasajeros</option>
+                            <option value="56">Bus para 56 pasajeros</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-5">
+                    <input class="form-control" id="primeraclase" placeholder="Primera clase" type="number"
+                        class="col-5" min="0" max="10" value=" ">
                 </div>
             </div>
-            </table>
+            <div class="row justify-content-center mb-3">
+                <div class="col-5">
+                    <input class="form-control" id="normal" placeholder="Normal" type="number" class="col-5" min="0"
+                        value=" ">
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-5">
+                    <input class="form-control" id="niños" placeholder="Niños" type="number" class="col-5" min="0"
+                        value=" ">
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-5">
+                    <input class="form-control" id="terceraedad" placeholder="Tercera Edad" type="number" class="col-5"
+                        min="0" value=" ">
+                </div>
+            </div>
+            <div class="button-form row">
+            </div>
         </div>
+        </table>
+    </div>
     </div>
     </div>
     <div class="contenidos" style="padding: 10px; margin: 20px; text-align: center;">
-        <input data-target="#Resultado" type="button" id="Enviar" class="boton" value="Calcular" onclick="calcularGastos()">
+        <input data-target="#Resultado" type="button" id="Enviar" class="btn btn-secondary btn-lg" value="Calcular"
+            onclick="calcularGastos()">
     </div>
-    <div style="padding: 10px; margin: 20px;">
-        <a id="volver" href="index.html" class="boton control" style="width: 50%;">Volver</a>
+    <div class="row mb-3">
+        <div class="col-2">
+            <a id="volver" href="index.html" class="btn btn-secondary" style="width: 50%;">Volver</a>
+        </div>
     </div>
-    </form>
 
     <div class="modal" id="Resultado" data-content>
         <div class="contenedor">
@@ -156,84 +192,85 @@
             </div>
         </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="informacion" tabindex="-1" aria-labelledby="informacion" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="informacion">Información</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <h6>Indicaciones</h6>
-                    <p>
-                        Seleccione la ruta que desea conocer un beneficio esperado, luego ingrese la cantidad de pasajeros en cada una de las clases que cuenta la empresa, posteriormente puede seleccionar el botón calcular para ser dirigido a la pantalla de resultados.
-                    </p>
-                    <p>
-                        El botón limpiar dejará en blanco las cajas de texto para que pueda ingresar los datos nuevamente.
-                    </p>
+        <!-- Modal -->
+        <div class="modal fade" id="informacion" tabindex="-1" aria-labelledby="informacion" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="informacion">Información</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <h6>Indicaciones</h6>
+                            <p>
+                                Seleccione la ruta que desea conocer un beneficio esperado, luego ingrese la cantidad de
+                                pasajeros en cada una de las clases que cuenta la empresa, posteriormente puede
+                                seleccionar el botón calcular para ser dirigido a la pantalla de resultados.
+                            </p>
+                            <p>
+                                El botón limpiar dejará en blanco las cajas de texto para que pueda ingresar los datos
+                                nuevamente.
+                            </p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h6>Rutas disponibles</h6>
+                            <ol>
+                                <li>
+                                    Tegucigalpa - Comayagua
+                                </li>
+
+                                <li>
+                                    Tegucigalpa - San Pedro Sula
+                                    <ul>
+
+                                        <li>
+                                            Tegucigalpa - Siguatepeque
+                                        </li>
+
+                                        <li>
+                                            Tegucigalpa - Santa Bárbara la Campa
+                                        </li>
+
+                                </li>
+                                <li>
+                                    Tegucigalpa - Santa Rosa de Copán
+                                </li>
+                                </ul>
+                                </li>
+                                <li>
+                                    Tegucigalpa - Olancho
+                                </li>
+                                </ul>
+                                </li>
+                                <li>
+                                    Tegucigalpa - Choluteca
+                                </li>
+                                </ul>
+                                </li>
+                                <li>
+                                    Tegucigalpa - La Ceiba
+                                </li>
+                                </ul>
+                                </li>
+                                <li>
+                                    Tegucigalpa - Trujillo
+                                </li>
+                                <li>
+                                    Tegucigalpa - Danlí
+                                </li>
+                                </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn_en btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
-                <hr>
-                <div>
-                    <h6>Rutas disponibles</h6>
-                    <ol>
-                        <li>
-                            Tegucigalpa - Comayagua
-                                </li>
-                          
-                        <li>
-                            Tegucigalpa - San Pedro Sula
-                            <ul>
-                          
-                        <li>
-                            Tegucigalpa - Siguatepeque
-                                </li>
-                          
-                        <li>
-                            Tegucigalpa - Santa Bárbara la Campa
-                                </li>
-                          
-                        </li>
-                        <li>
-                            Tegucigalpa - Santa Rosa de Copán
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Tegucigalpa - Olancho
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Tegucigalpa - Choluteca
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Tegucigalpa - La Ceiba
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Tegucigalpa - Trujillo
-                          </li>
-                        <li>
-                            Tegucigalpa - Danlí
-                                </li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-                           </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn_en btn-primary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
-        </div>
-    </div>
-    <!-- Sweet alert scripts -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <!-- Sweet Alert scripts -->
 </body>
+
 </html>
