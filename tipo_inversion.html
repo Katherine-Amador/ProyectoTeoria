@@ -9,39 +9,62 @@
     <link rel="stylesheet" href="css/estilos.css">
     <script src="./js/script.js" defer> </script>
     <link rel="icon" href="./img/bus_ico.png">
-
+    <script src="./js/inversion.js"></script>
 </head>
 
-<body>
+<body onload="tipoInversion ()" class="body" style="background-image: url(./img/background.png)">
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container , contenido-caja">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Cotizaciones</span></a> por TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+    {
+    "symbols": [
+      {
+        "description": "Dolar - Lempira",
+        "proName": "FX_IDC:USDHNL"
+      },
+      {
+        "description": "Bitcoin",
+        "proName": "COINBASE:BTCUSD"
+      },
+      {
+        "description": "Petroleo",
+        "proName": "CAPITALCOM:OIL_CRUDE"
+      }
+    ],
+    "colorTheme": "light",
+    "isTransparent": true,
+    "showSymbolLogo": true,
+    "locale": "es"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
     <div class="form">
         <div style="padding: 10px; margin: 20px; text-align: center;">
-            <div class="titulo_en center">
+            <div class="titulo_en center, contenido-caja" style="background-color:rgba(62, 158, 94,0.3);">
                 <h1>Inversión</h1>
             </div>
 
-            <div class="container">
+            <div class="container, contenido-caja">
                 <form>
-                  <fieldset>
+                    <fieldset style="text-align: center ;">
                       <legend>Tipo de inversión</legend>
                       <label>
-                        <input type="radio" name="color" value="azul"> Materia prima (Riesgo minímo)
+                        <legend>Materia prima (Riesgo minímo) <input id="I3" type="radio" name="eleccion" value="Petroleo" disabled> Petroleo</legend> 
                       </label>
+                      <br>
                       <label>
-                          <input type="radio" name="color" value="negro"> Petroleo
+                        <legend>Divisas (Riesgo medio) <input id="I2" type="radio" name="eleccion" value="Dolares" disabled> USD </legend> 
                       </label>
+                      <br>
                       <label>
-                          <input type="radio" name="color" value="amarillo"> Divisas (Riesgo medio)
+                        <legend>Crypto (Alto riesgo)<input id="I1" type="radio" name="eleccion" value="Bitcoin" disabled> BTC</legend> 
                       </label>
-                      <label>
-                          <input type="radio" name="numero" value="1"> Lempiras
-                      </label>
-                      <label>
-                          <input type="radio" name="numero" value="2"> Crypto (Alto riesgo)
-                      </label>
-                      <label>
-                          <input type="radio" name="numero" value="3"> BTC
-                      </label>
-                                      </fieldset>
+                    </fieldset>
                         </form>
             
               </div>
@@ -53,10 +76,216 @@
                 
                 <div class="example-button-row">
                     <a href="inversion.html">
-                  <button mat-stroked-button color="primary">Atrás</button>
-                  <button mat-stroked-button color="accent">Siguiente</button>
+                  <button mat-stroked-button color="primary">Atrás</button> </a>
+                  <button mat-stroked-button color="accent" id="INV" onclick="eleccion(); actualizar()">Invertir</button>
               
                 </div>
               </section>
+        <div>
+            <div style="text-align: center;">
+                <h3 id="IE"></h3>
+            </div>
+        </div>
+        <div class="container, contenido-caja">
+            <form>
+                <div >
+                    <section>
+                        <fieldset style="text-align: center ;">
+                            <legend><h3>Inversion actual</h3></legend>
+                            <label>
+                              <legend><b>Capital inicial invertido</b> </legend> 
+                              <div id="Capitalinvertido">
+          
+                              </div>
+                            </label>
+          
+                            <br>
+                            <label>
+                              <legend><b>Fecha de inversion</b></legend>
+                              <div id="fecha">
+          
+                              </div> 
+                            </label>
+                            <br>
+                            <label>
+                              <legend><b>Valor actual de la inversion</b></legend> 
+                              <div id="valor">
+          
+                              </div>
+                            </label>
+                            <br>
+                            <label>
+                              <legend><b>Cambio</b></legend> 
+                              <div id="cambio">
+          
+                              </div>
+                            </label>
+                            <br>
+                            <label>
+                              <legend><b>Ganancia/Perdida (Actual)</b></legend> 
+                              <div id="diferencia">
+          
+                              </div>
+                            </label>
+                            <br>
+                            <label>
+                                <legend><b>Prevision</b> <abbr title="Basado en las predicciones del portal experto en analisis de mercados de activos 'Tradingbeasts'"><img src="./img/18436.png" style="height: 15px;"></abbr></legend> 
+                                <div id="prevision" >
+                                    <table class = "default" style="margin: 0 auto;" border="1">
+                                        <tr>
+                                            <td><b>2022</b></td>
+                                            <td id="2022"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>2023</b></td>
+                                            <td id="2023"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>2024</b></td>
+                                            <td id="2024"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>2025</b></td>
+                                            <td id="2025"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                              </label>
+                           
+                            <br>
+                <div id="grafica-btc">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_5abef"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com/symbols/BTCUSD/?exchange=COINBASE" rel="noopener" target="_blank"><span class="blue-text">Tipos del BTCUSD</span></a> por TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    new TradingView.MediumWidget(
+                    {
+                    "symbols": [
+                    [
+                        "Bitcoin",
+                        "COINBASE:BTCUSD|1D"
+                    ]
+                    ],
+                    "chartOnly": false,
+                    "width": "1000",
+                    "height": "500",
+                    "locale": "es",
+                    "colorTheme": "light",
+                    "autosize": false,
+                    "showVolume": false,
+                    "hideDateRanges": false,
+                    "scalePosition": "right",
+                    "scaleMode": "Normal",
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                    "noTimeScale": false,
+                    "valuesTracking": "1",
+                    "chartType": "line",
+                    "fontColor": "rgba(0, 0, 0, 1)",
+                    "gridLineColor": "rgba(0, 0, 0, 1)",
+                    "backgroundColor": "rgba(255, 255, 255, 0.23)",
+                    "lineWidth": 4,
+                    "container_id": "tradingview_5abef"
+                }
+                    );
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+                </div>
+                <div id="grafica-usd">
+                   <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_b601d"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com/symbols/USDHNL/?exchange=FX_IDC" rel="noopener" target="_blank"><span class="blue-text">Tipos del USDHNL</span></a> por TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    new TradingView.MediumWidget(
+                    {
+                    "symbols": [
+                    [
+                        "Dolar - Lempira",
+                        "FX_IDC:USDHNL|1D"
+                    ]
+                    ],
+                    "chartOnly": false,
+                    "width": "1000",
+                    "height": "500",
+                    "locale": "es",
+                    "colorTheme": "light",
+                    "autosize": false,
+                    "showVolume": false,
+                    "hideDateRanges": false,
+                    "scalePosition": "right",
+                    "scaleMode": "Normal",
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                    "noTimeScale": false,
+                    "valuesTracking": "1",
+                    "chartType": "line",
+                    "fontColor": "rgba(0, 0, 0, 1)",
+                    "gridLineColor": "rgba(0, 0, 0, 1)",
+                    "backgroundColor": "rgba(255, 255, 255, 0.23)",
+                    "lineWidth": 4,
+                    "container_id": "tradingview_b601d"
+                }
+                    );
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+                </div>
+                <div id="grafica-petroleo">
+                   <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_2d7e7"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com/symbols/CAPITALCOM-OIL_CRUDE/" rel="noopener" target="_blank"><span class="blue-text">OIL_CRUDE Cotizaciones</span></a> por TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    new TradingView.MediumWidget(
+                    {
+                    "symbols": [
+                    [
+                        "Petroleo",
+                        "CAPITALCOM:OIL_CRUDE|1D"
+                    ]
+                    ],
+                    "chartOnly": false,
+                    "width": "1000",
+                    "height": "500",
+                    "locale": "es",
+                    "colorTheme": "light",
+                    "autosize": false,
+                    "showVolume": false,
+                    "hideDateRanges": false,
+                    "scalePosition": "right",
+                    "scaleMode": "Normal",
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                    "noTimeScale": false,
+                    "valuesTracking": "1",
+                    "chartType": "line",
+                    "fontColor": "rgba(0, 0, 0, 1)",
+                    "gridLineColor": "rgba(0, 0, 0, 1)",
+                    "backgroundColor": "rgba(255, 255, 255, 0.23)",
+                    "lineWidth": 4,
+                    "container_id": "tradingview_2d7e7"
+                }
+                    );
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+                </div>
+                </fieldset>
+  
+
+                    </section>
+                    <section style="align-items: center; width: 400px;">
+                    
+                    </section>
+                </div>
+                
+                
+                    </form>
+        
+          </div>
+
 </body>
 </html>

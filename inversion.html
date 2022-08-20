@@ -9,87 +9,99 @@
     <link rel="stylesheet" href="css/estilos.css">
     <script src="./js/script.js" defer> </script>
     <link rel="icon" href="./img/bus_ico.png">
+    <script src="./js/inversion.js"></script>
 
 </head>
 
-<body>
-    <div class="form">
+<body class="body" style="background-image: url(./img/background.png)">
+    <div class="form" action="./js/inversion.js" method="POST">
         <div style="padding: 10px; margin: 20px; text-align: center;">
-            <div class="titulo_en center">
-                <h1>Seleccione su perfil de inversor</h1>
+            <div class="contenido-caja " style="display: flex; height: 80px; width: 100%; text-align: center; background-color:rgba(62, 158, 94,0.3)" >
+                <img src="./img/graph.png" style="align-items: left; size: 25px; padding-left: 8%;">
+                <h1 style ="text-align: center; padding-left: 20%;" >Seleccione su perfil de inversor</h1>
             </div>
 
-            <div class="container">
-                <form>
-                  <fieldset>
-                      <legend>Tipo de inversor</legend>
-                      <label>
-                        <input type="radio" name="color" value="azul"> Prudente
-                      </label>
-                      <label>
-                          <input type="radio" name="color" value="negro"> Mixto
-                      </label>
-                      <label>
-                          <input type="radio" name="color" value="amarillo"> Agresivo
-                      </label>
-                  </fieldset>
-                  <fieldset>
-                      <legend>Objetivo de tu Inversión</legend>
-                      <label>
-                          <input type="radio" name="numero" value="1"> Ahorros
-                      </label>
-                      <label>
-                          <input type="radio" name="numero" value="2"> Educación de mis hijos
-                      </label>
-                      <label>
-                          <input type="radio" name="numero" value="3"> Vivienda
-                      </label>
-                      <label>
-                          <input type="radio" name="numero" value="3"> Jubilación
-                      </label>
-                  </fieldset>
-                  <fieldset>
-                    <legend>Capital disponible</legend>
-                    <label>
-                        <input type="radio" name="numero" value="1"> Menos de 1000 Lempiras
-                    </label>
-                    <label>
-                        <input type="radio" name="numero" value="2"> Entre 1000 - 10000 Lempiras
-                    </label>
-                    <label>
-                        <input type="radio" name="numero" value="3"> Más de 10000 Lempiras
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend>Experiencia</legend>
-                    <label>
-                        <input type="radio" name="numero" value="1"> Sin experiencia
-                    </label>
-                    <label>
-                        <input type="radio" name="numero" value="2"> Novato
-                    </label>
-                    <label>
-                        <input type="radio" name="numero" value="3"> Medio
-                    </label>
-                    <label>
-                        <input type="radio" name="numero" value="3"> Experto
-                    </label>
-                </fieldset>
-                </form>
-            
-              </div>
-        </div>
-              <mat-divider></mat-divider>
-              <section>
-                <div style="padding: 10px; margin: 20px; text-align: center;">
-                    <div class="titulo_en center">
+            <div class="contenido-caja" style="font-size: medium; background-size: cover;">
+                <div class="container">
+                    <form>
+                      <fieldset>
+                          <legend><h3>Tipo de inversor</h3></legend>
+                          <label>
+                            <input type="radio"  id ="TI" name="TI" value="1" checked> Prudente
+                          </label>
+                          <label>
+                              <input type="radio" id ="TI" name="TI" value="2"> Mixto
+                          </label>
+                          <label>
+                              <input type="radio" id ="TI" name="TI" value="3"> Agresivo
+                          </label>
+                      </fieldset>
+                      <fieldset>
+                          <legend><h3>Objetivo de tu Inversión</h3></legend>
+                          <label>
+                              <input type="radio" id ="OI" name="OI" value="1" checked > Ahorros
+                          </label>
+                          <label>
+                              <input type="radio" id ="OI" name="OI" value="2"> Educación de mis hijos
+                          </label>
+                          <label>
+                              <input type="radio" id ="OI" name="OI" value="3"> Vivienda
+                          </label>
+                          <label>
+                              <input type="radio" id ="OI" name="OI" value="4"> Jubilación
+                          </label>
+                      </fieldset>
+                      <fieldset>
+                        <legend ><h3>Capital disponible</h3></legend>
+                        <label>
+                            <input type="radio" id ="CI" name="CI" value="1" checked > Menos de 1000 Lempiras
+                        </label>
+                        <label>
+                            <input type="radio" id ="CI" name="CI" value="2"> Entre 1000 - 10000 Lempiras
+                        </label>
+                        <label>
+                            <input type="radio" id ="CI" name="CI" value="3"> Más de 10000 Lempiras
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend ><h3>Experiencia</h3></legend>
+                        <label>
+                            <input type="radio" id ="EXP" name="EXP" value="1" checked > Sin experiencia
+                        </label>
+                        <label>
+                            <input type="radio" id ="EXP" name="EXP" value="2"> Novato
+                        </label>
+                        <label>
+                            <input type="radio" id ="EXP" name="EXP" value="3"> Medio
+                        </label>
+                        <label>
+                            <input type="radio" id ="EXP" name="EXP" value="4"> Experto
+                        </label>
+                    </fieldset>
+                    </form>
                 
-                <div class="example-button-row">
-                  <button mat-stroked-button color="primary">Definir perfil</button>
-                  <a href="tipo_inversion.html">
-                  <button mat-stroked-button color="accent">Siguiente</button>
-              
-                </div>
-              </section>
+                  </div>
+            </div>
+                  <mat-divider></mat-divider>
+                  <section class="contenido-caja">
+                    <div style="padding: 10px; margin: 20px; text-align: center;">
+                        <div class="titulo_en center">
+                    
+                    <div class="example-button-row">
+                      <button mat-stroked-button color="primary" class="boton" style="background-color:black;" onclick="asignarInversion()" >Definir perfil</button>
+                      <a href="tipo_inversion.html">
+                      <button href="tipo_inversion.html" class="boton" style="background-color:black;" mat-stroked-button color="accent" id="siguiente" disabled>Siguiente</button>
+                      </a>
+                    </div>
+                    <div id="Perfil" style="display: none;">
+                        <label style="display: inline-block;"><p id = "Riesgo" ></p> </label> <br>
+                        <p id = "capital_asignado"></p> 
+                        <p>Monto a invertir: <input type="number" id="capital" disabled></p>
+                        <p id="monto_asignado"></p> 
+                        <button mat-stroked-button color="primary" id="Asignar" class="boton" style="background-color:black;" onclick="capitalAsignado()" disabled>Asignar</button>
+                    </div>
+                  </section>
+            </div>
+            
 </body>
 </html>
