@@ -1,32 +1,27 @@
 /*Variables de los distintos valores del formulario */
-var monto = document.getElementById('monto');
-var moneda = document.getElementById('moneda');
-var tiempo = document.getElementById('tiempo');
-var tipoTiempo = document.getElementById('tipoTiempo');
-var interes = document.getElementById('interes');
-var btnCalcular = document.getElementById('btnCalcular');
-var llenarTabla = document.querySelector('#lista-tabla tbody');
-const alerta = document.getElementById('alert-error');
-var amortizacion = document.getElementById('amortizacion');
-var dolar = 24.06; 
-
-
-btnCalcular.addEventListener('click', () => {
+let dolar = 24.06; 
+function calcularBTN(){
+    let monto = document.getElementById('monto');
+    let moneda = document.getElementById('moneda');
+    let tiempo = document.getElementById('tiempo');
+    let tipoTiempo = document.getElementById('tipoTiempo');
+    let interes = document.getElementById('interes');
+    let amortizacion = document.getElementById('amortizacion');
+    let validate = document.getElementById('validate');
     if (monto.value === '' || tiempo.value === '' || interes.value === '') {
-        alerta.hidden = false;
-        setTimeout(() => {
-            alerta.hidden = true;
-        }, 2000);
+        validate.style.display="block";
     } else {
+        validate.style.display="none";
         if (amortizacion.value =="frances"){
             calcularamortizacionFrancesa(monto.value,moneda.value, interes.value, tiempo.value, tipoTiempo.value);
         }else{
             calcularAmortizacionAlemana(monto.value,moneda.value, interes.value, tiempo.value, tipoTiempo.value);
         }
     }
-})
+}
 
 function calcularamortizacionFrancesa(monto,moneda, interes, tiempo, tipoTiempo){
+    let llenarTabla = document.querySelector('#lista-tabla tbody');
         console.log("Moneda: " + monto);
         console.log("monedad: " + moneda);
         console.log("interes: " + interes);
@@ -113,6 +108,7 @@ function calcularamortizacionFrancesa(monto,moneda, interes, tiempo, tipoTiempo)
 
 
 function calcularAmortizacionAlemana(monto,moneda, interes, tiempo, tipoTiempo) {
+    let llenarTabla = document.querySelector('#lista-tabla tbody');
     console.log("Moneda: " + monto);
     console.log("monedad: " + moneda);
     console.log("interes: " + interes);
@@ -130,8 +126,6 @@ function calcularAmortizacionAlemana(monto,moneda, interes, tiempo, tipoTiempo) 
     let anio_actual = moment(fechaActual);
     mes_actual.add(1, 'month');    
     anio_actual.add(1,"year");
-
-       
     let amortizacionConstante=0, pagoInteres=0, cuota=0;
 
         //converion a moneda 
