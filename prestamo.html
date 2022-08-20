@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/estilos.css">
     <script src="./js/script.js" defer> </script>
     <link rel="icon" href="./img/bus_ico.png">
-
 </head>
 
 <body>
@@ -20,10 +19,10 @@
 <body>
     <div>
             <div class="titulo_en center">
-                <h1>Simulador Financiero</h1>
+                <h1>Préstamo</h1>
             </div>
             <div>
-                <a href="inicio.html">
+                <a href="index.html">
                     <button class="btn btn_en btn-primary">Menú</button>
                 </a>
 
@@ -32,7 +31,9 @@
             </div>
             <hr>
         </div>
-        <div>
+
+        
+        <div class="items-form" style="padding: 10px; margin: 20px; text-align: left;"></div>
             <div class="center">
                 <h5>Mensualidad de un Préstamo</h5>
                 <p>Mediante el presente simulador podrá saber cuánto deberá pagar cada mes en un determinado préstamo.
@@ -85,8 +86,7 @@
                                         Debes llenar todos los campos!
                                     </div>
                                     <div class="items-form">
-                                        <button class="btn btn_en btn-primary" type="button"
-                                            id="btnCalcular">Calcular</button>
+                                        <button class="btn btn_en btn-primary" type="button"  id="btnCalcular" onclick="btnCalcular()" >Calcular</button>
                                     </div>
                                 </form>
 
@@ -96,9 +96,9 @@
                     
                     <div class="tabla_amortizacion center" id="tabla_amortizacion">
                         <div class="items-form">
-                            <!-- <label for="">Tabla de Amortización</label> -->
+
                             <div class="center">
-                                <h5>Tabla de Amortización</h5>
+                                <h5 class="center" >Tabla de Amortización</h5>
                             </div>
                             <hr>
                         </div>
@@ -122,7 +122,8 @@
             <br>
         </div>
     </div>
-
+   <!-- carga de controladores para la amortizacion francesa -->
+   <script src="../js/controlador_amortizacion.js"></script>
+  
 </body>
-
 </html>
