@@ -9,7 +9,7 @@
     position: relative;
 }
 
-#contenido-top {
+.contenido-top {
     background-color: rgba(164, 170, 207, 0.315);
     height: 100vh;    
 }
@@ -172,6 +172,15 @@ body2, .modal {
 
 }
 
+.contenido-caja {
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+    position: relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+    
+}
+
 .contenedor header {
     padding: 10px;
     background: #1d5ea8;
@@ -184,4 +193,16 @@ body2, .modal {
     top: 10px;
     right: 10px;
     cursor: pointer;
+}
+
+#grafica-btc {
+    display:none
+}
+
+#grafica-usd {
+    display:none
+}
+
+#grafica-petroleo {
+    display:none
 }
